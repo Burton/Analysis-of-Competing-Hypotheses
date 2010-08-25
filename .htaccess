@@ -1,0 +1,61 @@
+Options +Indexes -MultiViews
+RewriteEngine  on
+RewriteBase    /
+
+
+
+RewriteRule    ^project/new$ add_project.php [L]
+RewriteRule    ^project/(.*)/join$ project_join.php?id=$1 [L]
+RewriteRule    ^project/(.*)/chat$ project_chat.php?id=$1 [L]
+RewriteRule    ^project/(.*)/leave$ project_leave.php?id=$1 [L]
+RewriteRule    ^project/(.*)/group$ project.php?id=$1&part=group [L]
+RewriteRule    ^project/(.*)/group_ajax$ project.php?id=$1&part=group_ajax [L]
+RewriteRule    ^project/(.*)/export$ project.php?id=$1&part=export [L]
+RewriteRule    ^project/(.*)/edit$ project.php?id=$1&part=edit [L]
+RewriteRule    ^project/(.*)/hypothesis/(.*)/xml$ xml_hypothesis.php?hypothesis_id=$2 [L]
+RewriteRule    ^project/(.*)/hypothesis/new$ project.php?id=$1&part=add_hypothesis [L]
+RewriteRule    ^project/(.*)/hypothesis/new/multiple$ project.php?id=$1&part=add_hypothesis_multiple [L]
+RewriteRule    ^project/(.*)/hypothesis/(.*)/delete$ delete_hypothesis.php?hypothesis_id=$2 [L]
+RewriteRule    ^project/(.*)/hypothesis/(.*)$ project.php?id=$1&part=hypothesis&hypothesis_id=$2 [L]
+RewriteRule    ^project/(.*)/evidence/new$ project.php?id=$1&part=add_evidence [L]
+RewriteRule    ^project/(.*)/evidence/new/multiple$ project.php?id=$1&part=add_evidence_multiple [L]
+RewriteRule    ^project/(.*)/evidence/(.*)/xml$ xml_evidence.php?evidence_id=$2 [L]
+RewriteRule    ^project/(.*)/evidence/(.*)/delete$ delete_evidence.php?evidence_id=$2 [L]
+RewriteRule    ^project/(.*)/evidence/(.*)$ project.php?id=$1&part=evidence&evidence_id=$2 [L]
+RewriteRule    ^project/(.*)/cell/(.*)/(.*)/xml$ xml_cell.php?project_id=$1&evidence_id=$2&hypothesis_id=$3 [L]
+RewriteRule    ^project/(.*)/cell/(.*)/(.*)$ project.php?id=$1&part=cell&evidence_id=$2&hypothesis_id=$3 [L]
+RewriteRule    ^project/(.*)/delete$ project_delete.php?id=$1 [L]
+
+RewriteRule    ^project/(.*)/compare/(.*)/(.*)/print/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ project.php?id=$1&part=compare_print&print=y&compare_user_id=$2&compare_user_id_2=$3&sortColsBy=$4&sort_field_1=$5&sort_field_1_dir=$6&sort_field_2=$7&sort_field_2_dir=$8&dccs=$9 [L]
+
+RewriteRule    ^project/(.*)/compare/(.*)/print$ project.php?id=$1&part=compare_print&print=y&compare_user_id=$2 [L]
+RewriteRule    ^project/(.*)/compare/(.*)/(.*)$ project.php?id=$1&part=compare&compare_user_id=$2&compare_user_id_2=$3 [L]
+RewriteRule    ^project/(.*)/compare/(.*)$ project.php?id=$1&part=compare&compare_user_id=$2 [L]
+RewriteRule    ^project/(.*)/user/(.*)/print$ project.php?id=$1&part=user_print&print=y&ratings_user_id=$2 [L]
+RewriteRule    ^project/(.*)/user/(.*)$ project.php?id=$1&part=user&ratings_user_id=$2 [L]
+
+RewriteRule    ^project/(.*)/group/print/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ project.php?id=$1&part=group_print&print=y&sortColsBy=$2&sort_field_1=$3&sort_field_1_dir=$4&sort_field_2=$5&sort_field_2_dir=$6&dccs=$7 [L]
+RewriteRule    ^project/(.*)/print/(.*)/(.*)/(.*)/(.*)/(.*)/(.*)/$ project.php?id=$1&part=personal_print&print=y&sortColsBy=$2&sort_field_1=$3&sort_field_1_dir=$4&sort_field_2=$5&sort_field_2_dir=$6&dccs=$7 [L]
+
+RewriteRule    ^project/(.*)$ project.php?id=$1&part=personal [L]
+RewriteRule    ^projects/(.*)$ projects.php [L]
+RewriteRule    ^projects(.*)$ projects.php [L]
+RewriteRule    ^recent/$ recent_activity.php [L]
+RewriteRule    ^recent$ recent_activity.php [L]
+RewriteRule    ^evidence/(.*)$ evidence_by_serial.php?serial_number=$1 [L]
+RewriteRule    ^search/$ search.php [L]
+RewriteRule    ^help/$ help/index.php [L]
+RewriteRule    ^profile/edit$ edit_profile.php [L]
+RewriteRule    ^profile/(.*)$ profile.php?username=$1 [L]
+RewriteRule    ^joinrequest/(.*)/(.*)/(.*)$ join_request_action.php?user_id=$1&project_id=$2&action=$3 [L]
+RewriteRule    ^signup/$ new_account.php [L]
+RewriteRule    ^signup$ new_account.php [L]
+RewriteRule    ^import/$ import.php [L]
+RewriteRule    ^import$ import.php [L]
+RewriteRule    ^tutorial/$ tutorial.php [L]
+RewriteRule    ^tutorial$ tutorial.php [L]
+
+RewriteRule    ^password_reset/(.*)/(.*)$ password_reset_change.php?username=$1&password_hash=$2 [L]
+RewriteRule    ^password_reset/action$ password_reset_action.php [L]
+RewriteRule    ^password_reset/$ password_reset.php [L]
+RewriteRule    ^password_reset$ password_reset.php [L]

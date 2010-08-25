@@ -1,0 +1,92 @@
+/*
+	yDSF (ydnar Drop-Shadow-Fu)
+	ydnar@sixapart.com - http://www.sixapart.com
+*/
+
+.ydsf {
+	display: block;
+	position: relative;
+	margin: 4px -4px -4px 4px;
+	background: url(../images/shadow-grid.gif) repeat;
+}
+
+/* ie6 ignores this selector */
+html>body .ydsf {
+	margin: 10px -10px -10px 10px;
+	background: url(../images/shadow.png) right bottom no-repeat;
+}
+
+/* shadow corners */
+.ydsf:before,
+.ydsf:after {
+	content: " ";
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: inherit;	
+}
+
+.ydsf:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: -10px 0 0 auto;
+	background-position: right top;
+}
+
+.ydsf:after {
+	margin: -10px 0 0 -10px;
+	background-position: left bottom;
+}
+
+.ydsf .inner {
+	display: block;
+	position: relative;
+	overflow: hidden; /* prevents margin leakage from child elements */
+	left: -4px;
+	top: -4px;
+}
+
+/* ie6 ignores this selector */
+html>body .ydsf .inner {
+	left: -10px;
+	top: -10px;
+	margin: 0;
+}
+
+
+/* helper classes (not YDSF related) */
+
+.demo-ydsf {
+	position: relative;
+	border: 1px solid #999;
+	padding: 10px;
+	background: #fff url(../images/gradient.jpg) left top repeat-x;
+}
+
+.clear {
+	clear: both;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin: 0 -1px -1px 0;
+	border: 0;
+	padding: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+.left {
+	float: left;
+	display: inline; /* fixes ie double margin-left bug */
+}
+
+.right { float: right; }
+
+.note {
+	width: 200px;
+	border: 1px solid #666;
+	padding: 10px;
+	background: #ffc;
+	color: #333;
+}

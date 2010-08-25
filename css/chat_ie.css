@@ -1,0 +1,157 @@
+div.chatBigWrapper {
+}
+
+p.chatTab {
+	position: fixed;
+	bottom: 0px;
+	margin: 0px;
+	padding: 5px 18px 5px 5px;
+	font-weight: bold;
+	background: #DAE3FD;
+	border-top: 2px solid #7492EF;
+	border-right: 2px solid #7492EF;
+}
+
+
+
+h1.chatHead {
+	text-align: left;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+
+
+h1.chatHead a {
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+
+
+div.chatPanel {
+	height: 280px;
+	position: fixed;
+	bottom: -282px;
+	width: 100%;
+}
+
+
+
+div.chatShadow {
+	height: 0px;
+	width: 100%;
+	border-bottom: 2px solid #7492EF;
+	margin: 0px;
+}
+
+
+
+div.chatMain {
+	background: #DAE3FD;
+	height: 230px;
+	margin: 0px;
+}
+
+
+
+p.chatClose {
+	border: #7492EF 2px solid;
+	width: 4em;
+	padding: 2px;
+	margin: 0px;
+	position: relative;
+	top: 2px;
+	left: 2px;
+	float: left;
+}
+
+
+
+div.sendMessage {
+	float: left;
+	width: 800px;
+	margin-top: 10px;
+	margin-left: 100px;
+	border: #7492EF 2px solid;
+	background: #7492EF;
+	text-align: left;
+	padding: 0px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+div.sendMessage input {
+	margin: 5px 0px 0px 2px;
+	padding: 0px;
+}
+
+div.sendMessage input.text {
+	height: 25px;
+	width: 550px;
+	position: relative;
+	top: -3px;
+}
+
+div.sendMessage span.wheel {
+	position: relative;
+	top: -1px;
+}
+
+
+div.chatMessages {
+	float: left;
+	width: 800px;
+	height: 150px;
+	overflow-y: scroll;
+	margin-left: 100px;
+	border: #7492EF 2px solid;
+	background: #7492EF;
+}
+
+div.chatMessages p {
+	margin: 0px;
+	font-size: 11px;
+	padding: 2px;
+	border-bottom: #CCCCCC 1px solid;
+	background: #FFFFFF;
+	text-align: left;
+}
+
+div.chatMessages p span.date {
+	font-style: italic;
+	color: #999999;
+	width: 12em;
+	float: left;
+}
+
+div.chatMessages p span.name {
+	font-weight: bold;
+	width: 13em;
+	background: #EEEEEE;
+	float: left;
+	text-align: right;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+
+
+
+
+div.currentUsers {
+	width: 200px;
+	height: 180px;
+	overflow: auto;
+	padding: 10px;
+}
+
+div.currentUsers p.title {
+	margin-bottom: 4px;
+}
+
+div.currentUsers p {
+	margin: 0px;
+	font-size: 11px;
+	text-align: left;
+}

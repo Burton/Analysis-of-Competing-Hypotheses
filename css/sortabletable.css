@@ -1,0 +1,30 @@
+/* THIS IS POSSIBLY DEPRICATED */
+
+.sort-table thead td {
+	cursor:	pointer;
+}
+
+.sort-table thead td:active {
+	padding: 3px 4px 1px 6px;
+}
+
+.sort-table thead td[_sortType=None]:active {
+	padding: 2px 5px;
+}
+
+.sort-arrow {
+	width:					9px;
+	height:					9px;
+	background-position:	center center;
+	background-repeat:		no-repeat;
+	margin:					0 2px;
+}
+
+.sort-arrow.descending {
+	background-image:		url("/images/sort_down.gif");
+
+}
+
+.sort-arrow.ascending {
+	background-image:		url("/images/sort_up.gif");
+}

@@ -19,9 +19,9 @@ if ($_COOKIE['failed_login'] ) {
 
 <p><input type="submit" value="Sign in" /></p>
 
-<p class="forgot"><a href="/password_reset/">Forget your password?</a></p>
+<p class="forgot"><?php echo '<a href="' . $base_URL . '/password_reset/">Forget your password?</a>';?></p>
 
-<p class="signUp"><a href="/signup/">Sign Up for an Account...</a></p>
+<p class="signUp"><?php echo '<a href="' . $base_URL . '/signup/">Sign Up for an Account...</a>';?></p>
 
 </div>
 

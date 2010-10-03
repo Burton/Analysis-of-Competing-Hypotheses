@@ -25,7 +25,7 @@
 <base href="">
 <?php $base_URL="";
 $email_domain="";
-$versionNumber="0.9alpha"?>
+$versionNumber="1.0.2alpha"?>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/sortabletable.css" />
 

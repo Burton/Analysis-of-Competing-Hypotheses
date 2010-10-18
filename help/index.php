@@ -82,19 +82,19 @@ if( $active_user->logged_in ) { ?>
 
 	<h3>The ACH Methodology</h3>
 		
-	<p><a href="../help/ach.php">What is ACH?</a>: An introduction to the concept.</p>
-	<p><a href="../help/ach_2.php">ACH: A 9-Step Process</a>: step-by-step instructions, along with a sample product.</p>
-	<p><a href="../help/collaboration_steps.php">ACH as a Collaborative Process</a></p>
-	<p><a href="../help/hypotheses.php">Choosing Hypotheses</a></p>
-	<p><a href="../help/evidence.php">Choosing Evidence</a></p>
-	<p><a href="../help/rate_consistency.php">Rating the Consistency of Your Evidence</a></p>
+	<p><a href="help/ach.php">What is ACH?</a>: An introduction to the concept.</p>
+	<p><a href="help/ach_2.php">ACH: A 9-Step Process</a>: step-by-step instructions, along with a sample product.</p>
+	<p><a href="help/collaboration_steps.php">ACH as a Collaborative Process</a></p>
+	<p><a href="help/hypotheses.php">Choosing Hypotheses</a></p>
+	<p><a href="help/evidence.php">Choosing Evidence</a></p>
+	<p><a href="help/rate_consistency.php">Rating the Consistency of Your Evidence</a></p>
 	
 	<h3>The ACH Software</h3>
-	<p><a href="../help/howto_collaborate.php">ACH's Collaboration Tools</a></p>
-	<p><a href="../help/howto_hypotheses.php">Entering and Editing Hypotheses</a></p>
-	<p><a href="../help/howto_evidence.php">Entering and Editing Evidence and Arguments</a></p>	
-	<p><a href="../help/howto_matrices.php">Working With Matrices</a></p>
-	<p><a href="../help/howto_project_management.php">Project Management</a></p>
+	<p><a href="help/howto_collaborate.php">ACH's Collaboration Tools</a></p>
+	<p><a href="help/howto_hypotheses.php">Entering and Editing Hypotheses</a></p>
+	<p><a href="help/howto_evidence.php">Entering and Editing Evidence and Arguments</a></p>	
+	<p><a href="help/howto_matrices.php">Working With Matrices</a></p>
+	<p><a href="help/howto_project_management.php">Project Management</a></p>
 
 
 

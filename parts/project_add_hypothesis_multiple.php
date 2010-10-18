@@ -29,13 +29,13 @@
 
 
 
-<p class="evidenceSubmenu"><a href="<?=$base_URL?>/project/<?=$active_project->id?>/hypothesis/new">Single</a> <b>Multiple</b></p>
+<p class="evidenceSubmenu"><a href="<?=$base_URL?>project/<?=$active_project->id?>/hypothesis/new">Single</a> <b>Multiple</b></p>
 
 <p>Quick tips:
 	<ul><li>All of your hypotheses must be mutually exclusive: if one is correct, all others must be false.</li>
 		<li>Include all reasonable possibilities, including those that seem unlikely but not impossible.</li>
 	</ul>
-<a href="<?=$base_URL?>/help/hypotheses.php">More tips...</a></p>
+<a href="<?=$base_URL?>help/hypotheses.php">More tips...</a></p>
 
 <form name="newHypothesis" onsubmit="return validateMultiHypoFormOnSubmit(this)" class="formatted" method="post" class="edit" action="project_add_hypothesis_multiple_action.php">
 

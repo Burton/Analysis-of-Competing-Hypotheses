@@ -21,7 +21,7 @@
 **    along with Open Source ACH. If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
-<h3>Personal Matrix for <?=$active_user->name?><?php /*<a href="<?=substr($_SERVER['REQUEST_URI'], 0, -6)?>"><img class="icon" src="<?=$base_URL?>/images/icons/monitor.png" alt="Back to normal application" border="0" /></a>*/?></h3>
+<h3>Personal Matrix for <?=$active_user->name?><?php /*<a href="<?=substr($_SERVER['REQUEST_URI'], 0, -6)?>"><img class="icon" src="<?=$base_URL?>images/icons/monitor.png" alt="Back to normal application" border="0" /></a>*/?></h3>
 
 
 

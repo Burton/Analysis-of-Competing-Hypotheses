@@ -131,7 +131,7 @@ if( $active_user->logged_in ) { ?>
 				
 				<h2>Create New Project</h2>
 				(If you have built any projects in the <a href="http://www2.parc.com/istl/projects/ach/ach.html">
-				original ACH software</a>, you may <a href="<?=$base_URL?>/import/">import those matrices here</a>.)
+				original ACH software</a>, you may <a href="<?=$base_URL?>import/">import those matrices here</a>.)
 				<div class="form">
 					
 					<h3 style="color: red">Title (required)</h3>
@@ -150,15 +150,7 @@ if( $active_user->logged_in ) { ?>
 					
 					<p class="formNote">Comma-seperated. Optional.</p>
 					
-					<h3>Project's Overall Classification</h3>
-					
-					<p><select name="classification">
-						<option value="U">Unclassified</option>
-						<option value="C">Confidential</option>
-						<option value="S">Secret</option>
-						<option value="TS">Top Secret</option>
-					</select></p>
-					<br/>
+
 					<div class="privacySettings">
 					<h3>Project Privacy <?php helpLink('howto_project_management.php#project_privacy') ?></h3>
 					<br />

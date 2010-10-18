@@ -38,7 +38,7 @@ if (empty($active_users)) {
 <?php for( $i = 0; $i < count($active_users); $i++ ) {
 	$this_user = new User();
 	$this_user->populateFromId($active_users[$i]);
-	echo("<li><p><a class='name' href='" . $base_URL . "/profile/" . $this_user->username . "' style='color: #" . $this_user->color . ";'>" . $this_user->name . "</a><br />Viewing: <a href='" . $this_user->last_page . "'>" . $this_user->last_page . "</a></p></li>");
+	echo("<li><p><a class='name' href='" . $base_URL . "profile/" . $this_user->username . "' style='color: #" . $this_user->color . ";'>" . $this_user->name . "</a><br />Viewing: <a href='" . $this_user->last_page . "'>" . $this_user->last_page . "</a></p></li>");
 }
 
 ?></ul>

@@ -52,7 +52,7 @@ $this_user->populateFromId($active_evidence->user_id);
 
 <p class="serial"><b>Serial Number: </b><?=$active_evidence->serial_number?>
 <?php if ($active_evidence->serial_number != NULL) { ?>
-<a href="<?=$base_URL?>/evidence/<?=$active_evidence->serial_number?>"><em> Who else is using this?</em></a></p>
+<a href="<?=$base_URL?>evidence/<?=$active_evidence->serial_number?>"><em> Who else is using this?</em></a></p>
 <? } ?>
 
 <p class="caveat"><b>Date and Time of Source: </b><?=substr($active_evidence->date_of_source, 0, 19)?></p>
@@ -61,7 +61,7 @@ $this_user->populateFromId($active_evidence->user_id);
 
 <p class="serial"><b>Flagged: </b><?=$active_evidence->flag?></p>
 
-<p class="xml"><a href="<?=$base_URL?>/project/<?=$active_project->id?>/evidence/<?=$active_evidence->id?>/xml">XML</a></p>
+<p class="xml"><a href="<?=$base_URL?>project/<?=$active_project->id?>/evidence/<?=$active_evidence->id?>/xml">XML</a></p>
 
 
 
@@ -169,7 +169,7 @@ $this_credibility->getUserEvidence($active_evidence->id);
 
 
 
-<p class="info">Added by <a href="<?=$base_URL?>/profile/<?=$this_user->username?>"><?=$this_user->name?></a> on <b><?=$active_evidence->created?></b>.</p>
+<p class="info">Added by <a href="<?=$base_URL?>profile/<?=$this_user->username?>"><?=$this_user->name?></a> on <b><?=$active_evidence->created?></b>.</p>
 
 
 

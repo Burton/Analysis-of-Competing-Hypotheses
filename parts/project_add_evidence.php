@@ -29,7 +29,7 @@
 
 
 
-<p class="evidenceSubmenu"><b>Single</b> <a href="<?=$base_URL?>/project/<?=$active_project->id?>/evidence/new/multiple">Multiple</a></p>
+<p class="evidenceSubmenu"><b>Single</b> <a href="<?=$base_URL?>project/<?=$active_project->id?>/evidence/new/multiple">Multiple</a></p>
 
 
 

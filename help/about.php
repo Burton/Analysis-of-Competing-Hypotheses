@@ -54,7 +54,7 @@ if( $active_user->logged_in ) { ?>
 
 <h2>About this instance</h2>
 You are running Open Source ACH version <?php echo $versionNumber?>. Updates might be available at <a href="http://competinghypotheses.org">competinghypotheses.org</a>, the project's home on the Web.<br /> 
-This software and all modifications to it are licensed under ______.
+This software and all modifications to it are licensed under the General Public License, version 3.
 
 
 

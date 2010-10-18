@@ -25,7 +25,7 @@
 
 
 
-<p><b>Consensus Guage:</b> <img style="position: relative; top: 4px; padding-left: 15px;" src="<?=$base_URL?>/images/gauge.gif"></p>
+<p><b>Consensus Guage:</b> <img style="position: relative; top: 4px; padding-left: 15px;" src="<?=$base_URL?>images/gauge.gif"></p>
 
 
 

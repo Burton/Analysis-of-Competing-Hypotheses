@@ -41,7 +41,7 @@ $sort_field_2_dir = "asc";
 
 
 
-<p id="editSubmit" style="margin-bottom: 10px;"><input class="button" type="submit" value="Save Changes" onclick="savePersonalMatrix();" /> <a href="<?=$base_URL?>/project/<?=$active_project->id?>">Cancel</a></p>
+<p id="editSubmit" style="margin-bottom: 10px;"><input class="button" type="submit" value="Save Changes" onclick="savePersonalMatrix();" /> <a href="<?=$base_URL?>project/<?=$active_project->id?>">Cancel</a></p>
 
 
 

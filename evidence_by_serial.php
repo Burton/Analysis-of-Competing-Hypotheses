@@ -81,7 +81,7 @@ while($query_data = mysql_fetch_array($result)) {
 	
 ?>
 
-<p>Project <a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> describes evidence as: <a href="<?=$base_URL?>/project/<?=$this_project->id?>/evidence/<?=$this_evidence->id?>"><?=$this_evidence->name?></a></p>
+<p>Project <a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> describes evidence as: <a href="<?=$base_URL?>project/<?=$this_project->id?>/evidence/<?=$this_evidence->id?>"><?=$this_evidence->name?></a></p>
 
 
 <?php 	}

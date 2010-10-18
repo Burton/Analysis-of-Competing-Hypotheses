@@ -33,17 +33,12 @@
 				 if ($count == 0) {
 					if( $active_user->id == $active_project->user_id)	{	
 					
-						//BRIDGE-SPECIFIC MATERIAL
 		
-						echo "<h2>You must <a href=\"$base_URL/project/$active_project->id/hypothesis/new\">add hypotheses</a> before continuing.</h2><p>Quick tips:
+						echo "<h2>You must <a href='" . $base_URL . "project/" . $active_project->id . "/hypothesis/new'>add hypotheses</a> before continuing.</h2><p>Quick tips:
 						<ul><li>All of your hypotheses must be mutually exclusive: if one is correct, all others must be false.</li>
 						<li>Include all reasonable possibilities, including those that seem unlikely but not impossible.</li></ul></p>
-						<p><a href=\"" . $base_URL . "/help/hypotheses.php\">Read more about choosing good hypotheses</a>, or <a href=\"https://mediawiki.bridge-ic.net/index.php?title=ACH:" . $active_project->title . "\">discuss potential hypotheses with your teammates on the BRIDGE wiki</a>.</p>"; 
-						} else {
-						echo "<h2>This matrix is empty. The project owner has not yet added any hypotheses.</h2>
-						<p><a href=\"https://mediawiki.bridge-ic.net/index.php?title=ACH:" . $active_project->title . "\">Discuss potential hypotheses with your teammates on the BRIDGE wiki</a>.</p>";
+						<p><a href=\"" . $base_URL . "help/hypotheses.php\">Read more about choosing good hypotheses</a>.</p>"; 
 						}
-						//END BRIDGE-SPECIFIC MATERIAL
 		
 					} else if ($count_evidence == 0) {
 		
@@ -56,8 +51,8 @@
 					
 					?>
 					
-					<h3>Personal Matrix <a onclick="goToPrintPage();"><img class="icon" src="<?=$base_URL?>/images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
-					<span id="nonEdit"><a onClick="edit_table = 1; reloadAjaxGroupTable(); document.getElementById('editSubmit').style.display='block'; document.getElementById('nonEdit').style.display='none';"><?php /* <a href="project.php?id=<?=$active_project->id?>&part=edit_scores"> */ ?>Edit your consistency scores</a> <a style="padding-left: 20px;" href="<?=$base_URL?>/dupe_personal_matrix.php?project_id=<?=$active_project->id?>">Duplicate personal matrix</a></span>
+					<h3>Personal Matrix <a onclick="goToPrintPage();"><img class="icon" src="<?=$base_URL?>images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
+					<span id="nonEdit"><a onClick="edit_table = 1; reloadAjaxGroupTable(); document.getElementById('editSubmit').style.display='block'; document.getElementById('nonEdit').style.display='none';"><?php /* <a href="project.php?id=<?=$active_project->id?>&part=edit_scores"> */ ?>Edit your consistency scores</a> <a style="padding-left: 20px;" href="<?=$base_URL?>dupe_personal_matrix.php?project_id=<?=$active_project->id?>">Duplicate personal matrix</a></span>
 					<span id="editSubmit" style="display: none; margin-bottom: 10px;">Scores are saved immediately when chosen. No need to click Submit. To refresh hypothesis scores, <a onClick="edit_table = 0; reloadAjaxGroupTable(); document.getElementById('editSubmit').style.display='none'; document.getElementById('nonEdit').style.display='block';">stop editing</a>.</span>
 					<br /><br />
 					
@@ -206,14 +201,14 @@
 		<?php 
 		$active_project->getJoinRequests(); 
 		if( $active_project->open == "y" ) { ?>
-		<p><a class="button" href="<?=$base_URL?>/project/<?=$active_project->id?>/join">Join this project</a></p>
+		<p><a class="button" href="<?=$base_URL?>project/<?=$active_project->id?>/join">Join this project</a></p>
 		<p><strong>NOTE: Please join only if you intend to actively contribute.</strong> This entails populating the <a href=
-		"<?=$base_URL?>/project/<?=$active_project->id?>/group">matrix</a> with your own judgments.
-		<br />You are free to browse the <a href="<?=$base_URL?>/project/<?=$active_project->id?>/group">Group Matrix</a> and other members' Personal matrices without joining.</p>
+		"<?=$base_URL?>project/<?=$active_project->id?>/group">matrix</a> with your own judgments.
+		<br />You are free to browse the <a href="<?=$base_URL?>project/<?=$active_project->id?>/group">Group Matrix</a> and other members' Personal matrices without joining.</p>
 		<?php } else if( in_array($active_user->id, $active_project->join_requests) ) { ?>
 		<p><i><b>You have requested permission to join this project. The project owner has been notified. When your request is acted upon, there will be a notification on your <a href="<?=$base_URL?>">home page</a>.</b></i></p>
 		<?php } else { ?>
-		<p><a class="button" href="<?=$base_URL?>/project/<?=$active_project->id?>/join">Request permission to join this project</a></p>
+		<p><a class="button" href="<?=$base_URL?>project/<?=$active_project->id?>/join">Request permission to join this project</a></p>
 		<?php } ?>
 		<br />
 		<?php } ?>

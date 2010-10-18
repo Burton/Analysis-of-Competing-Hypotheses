@@ -42,7 +42,7 @@ setStatusMessage("Updated!");
 <html>
 <head>
 	<title>Updating...</title>
-	<meta http-equiv=Refresh content="0; url=<?=$base_URL?>/project/<?=$active_hypothesis->project_id?>">
+	<meta http-equiv=Refresh content="0; url=<?=$base_URL?>project/<?=$active_hypothesis->project_id?>">
 </head>
 
 

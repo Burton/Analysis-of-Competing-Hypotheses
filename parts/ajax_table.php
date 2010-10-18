@@ -120,7 +120,7 @@ if( $kind == "group" ) {
 echo('</tr></thead><tbody>');
 
 for( $i = 0; $i < count($evidence); $i++ ) {
-	echo('<tr><td class="evidence"><a href="'. $base_URL . '/project/' . $active_project->id . '/evidence/' . $evidence[$i]->id . '" onmouseover="return overlib(\'' . cleanForDisplay($evidence[$i]->details) . '\', CAPTION, \'Evidence Notes\');" onmouseout="return nd();">' . $evidence[$i]->name . '</a>');
+	echo('<tr><td class="evidence"><a href="'. $base_URL . 'project/' . $active_project->id . '/evidence/' . $evidence[$i]->id . '" onmouseover="return overlib(\'' . cleanForDisplay($evidence[$i]->details) . '\', CAPTION, \'Evidence Notes\');" onmouseout="return nd();">' . $evidence[$i]->name . '</a>');
 	if( $evidence[$i]->getCredFlag() ) {
 		echo(' <span class="credFlagged" onmouseover="return overlib(\'One or more analysts doubts the credibility of this source.\', CAPTION, \'CREDIBILITY ALERT\');" onmouseout="return nd();">( ! )</span>');
 	}
@@ -132,7 +132,7 @@ for( $i = 0; $i < count($evidence); $i++ ) {
 	<td class="dcDateOfSource" style="<?php if( $dccDateOfSource == 0 ) { ?>display: none;<?php } ?>"><?=substr($evidence[$i]->date_of_source, 0, 19)?></td>
 	<td class="dcType" style="<?php if( $dccType == 0 ) { ?>display: none;<?php } ?>"><?=$evidence[$i]->type?></td>
 	<td class="dcCode" style="<?php if( $dccCode == 0 ) { ?>display: none;<?php } ?>"><?=$evidence[$i]->code?></td>
-	<td class="dcFlag" style="<?php if( $dccFlag == 0 ) { ?>display: none;<?php } ?>"><a id="flag_<?=$evidence[$i]->id?>" onclick="switchFlag('flag_<?=$evidence[$i]->id?>', <?=$evidence[$i]->id?>);"><?php if( $evidence[$i]->flag == "y" ) { echo("<img src='". $base_URL . "/images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "/images/icons/bullet_add.png' />"); } ?></a></td>
+	<td class="dcFlag" style="<?php if( $dccFlag == 0 ) { ?>display: none;<?php } ?>"><a id="flag_<?=$evidence[$i]->id?>" onclick="switchFlag('flag_<?=$evidence[$i]->id?>', <?=$evidence[$i]->id?>);"><?php if( $evidence[$i]->flag == "y" ) { echo("<img src='". $base_URL . "images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "images/icons/bullet_add.png' />"); } ?></a></td>
 
 <?php if( $kind == "personal" || $kind == "user" ) { 
 

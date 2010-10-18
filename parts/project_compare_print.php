@@ -45,7 +45,7 @@ if( $_REQUEST['compare_user_id_2'] ) {
 ?>
 
 
-<p><img src="<?=$base_URL?>/images/consensusgauge.gif"></p>
+<p><img src="<?=$base_URL?>images/consensusgauge.gif"></p>
 
 
 

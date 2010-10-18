@@ -21,7 +21,7 @@
 **    along with Open Source ACH. If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
-<h3>Compare User Matrices <a href="<?=$_SERVER['REQUEST_URI']?>/print"><img class="icon" src="<?=$base_URL?>/images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
+<h3>Compare User Matrices <a href="<?=$_SERVER['REQUEST_URI']?>/print"><img class="icon" src="<?=$base_URL?>images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
 
 <?php
 
@@ -60,7 +60,7 @@ if( $_REQUEST['compare_user_id_2'] ) {
 
 
 
-<p><img src="<?=$base_URL?>/images/consensusgauge.gif"></p>
+<p><img src="<?=$base_URL?>images/consensusgauge.gif"></p>
 
 <table cellspacing="0" cellpadding="0" border="0" class="sort-table" id="compareMatrix"><thead><tr><th class="hypothesis"></th>
 <?php
@@ -80,7 +80,7 @@ $active_project->getEandH();
 for( $j = 0; $j < count($active_project->hypotheses); $j++ ) {
 	$this_hypothesis = new Hypothesis();
 	$this_hypothesis->populateFromId($active_project->hypotheses[$j]);
-	echo('<th class="hypothesis" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $active_project->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+	echo('<th class="hypothesis" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $active_project->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
 	
 	$rating_score = 0;
 	
@@ -99,7 +99,7 @@ echo('</tr></thead><tbody>');
 for( $i = 0; $i < count($active_project->evidence); $i++ ) {
 	$this_evidence = new Evidence();
 	$this_evidence->populateFromId($active_project->evidence[$i]);
-	echo('<tr><td class="evidence" onmouseover="return overlib(\'' . cleanForDisplay($this_evidence->details) . '\', CAPTION, \'Evidence\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $active_project->id . '/evidence/' . $this_evidence->id . '">' . $this_evidence->name . '</a></td>');
+	echo('<tr><td class="evidence" onmouseover="return overlib(\'' . cleanForDisplay($this_evidence->details) . '\', CAPTION, \'Evidence\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $active_project->id . '/evidence/' . $this_evidence->id . '">' . $this_evidence->name . '</a></td>');
 	
 ?>
 
@@ -107,7 +107,7 @@ for( $i = 0; $i < count($active_project->evidence); $i++ ) {
 	<td class="dcDateOfSource" style="display: none;"><?=substr($this_evidence->date_of_source, 0, 10)?></td>
 	<td class="dcType" style="display: none;"><?=$this_evidence->type?></td>
 	<td class="dcCode" style="display: none;"><?=$this_evidence->code?></td>
-	<td class="dcFlag" style="display: none;"><a id="flag_<?=$this_evidence->id?>" onclick="switchFlag('flag_<?=$this_evidence->id?>', <?=$this_evidence->id?>);"><?php if( $this_evidence->flag == "y" ) { echo("<img src='". $base_URL . "/images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "/images/icons/bullet_add.png' />"); } ?></a></td>	
+	<td class="dcFlag" style="display: none;"><a id="flag_<?=$this_evidence->id?>" onclick="switchFlag('flag_<?=$this_evidence->id?>', <?=$this_evidence->id?>);"><?php if( $this_evidence->flag == "y" ) { echo("<img src='". $base_URL . "images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "images/icons/bullet_add.png' />"); } ?></a></td>	
 <?php
 
 	for( $j = 0; $j < count($active_project->hypotheses); $j++ ) {
@@ -148,19 +148,19 @@ for( $i = 0; $i < count($active_project->evidence); $i++ ) {
 				
 
 		if( $group_rating <= 1 ) {
-			echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" <div class=\"unanimity\"><a href='" . $base_URL . "/project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Consensus</a><span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
+			echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" <div class=\"unanimity\"><a href='" . $base_URL . "project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Consensus</a><span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
 		}
 
 		if( $group_rating == 2 ) {
-			echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "/project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Mild Dispute</a></div>");
+			echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Mild Dispute</a></div>");
 		}
 
 		if( $group_rating == 3 ) {
-			echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "/project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Large Dispute</a></div>");
+			echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Large Dispute</a></div>");
 		}
 
 		if( $group_rating == 4 ) {
-			echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "/project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Extreme Dispute</a></div>");
+			echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "project/" . $active_project->id . "/cell/" . $this_evidence->id . "/" . $active_project->hypotheses[$j] . "'>Extreme Dispute</a></div>");
 		}
 		
 		

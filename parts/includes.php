@@ -22,9 +22,9 @@
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
 
-<base href="">
-<?php $base_URL="";
-$email_domain="";
+<base href="http://sma.competinghypotheses.com/sub/sub/">
+<?php $base_URL="http://sma.competinghypotheses.com/sub/sub/";
+$email_domain="sma.competinghypotheses.com";
 $versionNumber="1.0.2alpha"?>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/sortabletable.css" />
@@ -69,7 +69,7 @@ var baseURL = "<?php print $base_URL; ?>";
 function confirm_delete_evidence(id) {
 	confirmer = confirm("Are you sure you want to delete this piece of evidence?");
 	if( confirmer == true ) { 
-		window.location.href = baseURL+"/project/<?=$active_project_id?>/evidence/"+id+"/delete";
+		window.location.href = baseURL+"project/<?=$active_project_id?>/evidence/"+id+"/delete";
 	} else {
 		alert("Delete canceled.");
 	}
@@ -78,7 +78,7 @@ function confirm_delete_evidence(id) {
 function confirm_delete_hypothesis(id) {
 	confirmer = confirm("Are you sure you want to delete this hypothesis?");
 	if( confirmer == true ) { 
-		window.location.href = baseURL+"/project/<?=$active_project_id?>/hypothesis/"+id+"/delete";
+		window.location.href = baseURL+"project/<?=$active_project_id?>/hypothesis/"+id+"/delete";
 	} else {
 		alert("Delete canceled.");
 	}
@@ -203,7 +203,7 @@ function getReturn(e) {
 
 
 function switchFlag(dom_id, ev_id) {
-	document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"/images/icons/arrow_refresh_small.png' />";
+	document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"images/icons/arrow_refresh_small.png' />";
 	var oXmlHttp = zXmlHttp.createRequest();
 	oXmlHttp.open("get", "switch_flag.php?evidence_id=" + ev_id, true);
 	oXmlHttp.onreadystatechange = function () {
@@ -211,7 +211,7 @@ function switchFlag(dom_id, ev_id) {
 			if (oXmlHttp.status == 200) {
 				document.getElementById(dom_id).innerHTML = oXmlHttp.responseText;
 			} else {
-				document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"/images/icons/error.png' />";
+				document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"images/icons/error.png' />";
 			}
 		}            
 	}
@@ -221,7 +221,7 @@ function switchFlag(dom_id, ev_id) {
 
 
 function switchCred(dom_id, cred_id) {
-	document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"/images/icons/arrow_refresh_small.png' />";
+	document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"images/icons/arrow_refresh_small.png' />";
 	var oXmlHttp = zXmlHttp.createRequest();
 	oXmlHttp.open("get", "switch_cred.php?credibility_id=" + cred_id, true);
 	oXmlHttp.onreadystatechange = function () {
@@ -229,7 +229,7 @@ function switchCred(dom_id, cred_id) {
 			if (oXmlHttp.status == 200) {
 				document.getElementById(dom_id).innerHTML = oXmlHttp.responseText;
 			} else {
-				document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"/images/icons/error.png' />";
+				document.getElementById(dom_id).innerHTML = "<img src='"+baseURL+"images/icons/error.png' />";
 			}
 		}            
 	}

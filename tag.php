@@ -77,8 +77,8 @@ while($query_data = mysql_fetch_array($result)) {
 
 ?>
 
-<p><a href="<?=$base_URL?>/class/<?=$query_data['id']?>"><?=$query_data['title']?></a><br />
-<span class="classListInfo">Taught by <a href="<?=$base_URL?>/profile/<?=$this_teacher->username?>"><?=$this_teacher->name?></a><br />
+<p><a href="<?=$base_URL?>class/<?=$query_data['id']?>"><?=$query_data['title']?></a><br />
+<span class="classListInfo">Taught by <a href="<?=$base_URL?>profile/<?=$this_teacher->username?>"><?=$this_teacher->name?></a><br />
 Starts <a href="">June 1st, 2007</a></span></p>
 
 <?php } ?>

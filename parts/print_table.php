@@ -132,7 +132,7 @@ if( $kind == "group" ) {
 echo('</tr></thead><tbody>');
 
 for( $i = 0; $i < count($evidence); $i++ ) {
-	echo('<tr><td class="evidence"><a href="'. $base_URL . '/project/' . $active_project->id . '/evidence/' . $evidence[$i]->id . '">' . $evidence[$i]->name . '</a>');
+	echo('<tr><td class="evidence"><a href="'. $base_URL . 'project/' . $active_project->id . '/evidence/' . $evidence[$i]->id . '">' . $evidence[$i]->name . '</a>');
 	if( $evidence[$i]->getCredFlag() ) {
 		echo(' <span class="credFlagged">( ! )</span>');
 	}

@@ -228,7 +228,7 @@ class User extends FrameworkDatabase {
 			echo('<p class="' . $query_data['type'] . '">You have been ');
 			if( $query_data['type'] == "approve" ) { echo('approved'); }
 			if( $query_data['type'] == "deny" ) { echo('denied'); }
-			echo(' access to project <a href="' . $base_URL . '/project/' . $this_project->id . '">' . $this_project->title . '</a> by <a href="' . $base_URL . '/profile/' . $by_user->username . '">' . $by_user->name . '</a>.');
+			echo(' access to project <a href="' . $base_URL . 'project/' . $this_project->id . '">' . $this_project->title . '</a> by <a href="' . $base_URL . 'profile/' . $by_user->username . '">' . $by_user->name . '</a>.');
 		}
 		echo('</div>');
 		mysql_do("UPDATE invitation_notices SET displayed='y' WHERE user_id='$this->id';");
@@ -239,7 +239,7 @@ class User extends FrameworkDatabase {
 		while($query_data = mysql_fetch_array($result)) {
 			$this_project = new Project();
 			$this_project->populateFromId($query_data['project_id']);
-			echo('<p>Still waiting on approval to join project <a href="' . $base_URL . '/project/' . $this_project->id . '">' . $this_project->title . '</a>.</p>');
+			echo('<p>Still waiting on approval to join project <a href="' . $base_URL . 'project/' . $this_project->id . '">' . $this_project->title . '</a>.</p>');
 		}
 	}
 	
@@ -251,7 +251,7 @@ class User extends FrameworkDatabase {
 	public function sendPasswordReset() {
 		global $base_URL;
 		global $email_domain;
-		$message = "Please reset your password by visiting this URL:\r\n\r\n" . $base_URL . "/password_reset/" . $this->username . "/" . md5($this->password) . "\r\n\r\nThanks!\r\n\r\n - The ACH Bot";
+		$message = "Please reset your password by visiting this URL:\r\n\r\n" . $base_URL . "password_reset/" . $this->username . "/" . md5($this->password) . "\r\n\r\nThanks!\r\n\r\n - The ACH Bot";
 		$headers = 'From: ACH System <noreply@' . $email_domain . ">\r\n" . 'Reply-To: noreply@' . $email_domain;
 		mail($this->email, "[ACH] Password Reset Link", $message, $headers);
 	}	

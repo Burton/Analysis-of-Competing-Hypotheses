@@ -79,7 +79,7 @@ else { */
 	
 	<h2><?=$display_user->name?> 
 	<?php if( $active_user->id == $display_user->id ) { ?>
-	<a href="<?=$base_URL?>/profile/edit">(Edit your profile)</a>
+	<a href="<?=$base_URL?>profile/edit">(Edit your profile)</a>
 	<?php } ?>
 	</h2>
 	<?php
@@ -110,21 +110,14 @@ else { */
 	
 	<div class="projectList">
 
-	<h3><a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $display_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h3>
+	<h3><a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $display_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h3>
 	
 	<p class="desc"><?=$this_project->description?></p>
 	</div>
 	<?php } } } }?>
 	
 <br /><br />	
-<!--BRIDGE-SPECIFIC MATERIAL-->	
-<?php	
-	if ($base_URL == "https://ach.bridge-ic.net") {
-	echo "<a href='https://gms.bridge-ic.net/manager/index.html#ReadMemberAction?nodeId=" . $display_user->username . "&type=User'>
-	View this user's BRIDGE profile</a>";
-	}
-?>	
-<!--END BRIDGE-SPECIFIC MATERIAL-->	
+
 	
 	</div></div>
 	

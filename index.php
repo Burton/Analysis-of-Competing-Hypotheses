@@ -114,7 +114,7 @@ $active_user->getProjects();
 			
 			<div class="projectList">
 			
-			<h4><a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
+			<h4><a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
 			
 			<p class="desc"><?=$this_project->description?></p>
 			
@@ -125,7 +125,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->users); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->users[$j]);
-				echo('<a href="'. $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
+				echo('<a href="'. $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
 			}
 			
 			if( count($this_project->users) == 0 ) { echo("None."); }
@@ -145,7 +145,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->join_requests); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->join_requests[$j]);
-				echo('<li><a href="'. $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
+				echo('<li><a href="'. $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
 			}
 			
 			?>
@@ -178,7 +178,7 @@ $active_user->getProjects();
 			
 			<div class="projectList">
 			
-			<h4><a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
+			<h4><a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
 			
 			<p class="desc"><?=$this_project->description?></p>
 			
@@ -189,7 +189,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->users); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->users[$j]);
-				echo('<a href="' . $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
+				echo('<a href="' . $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
 			}
 			
 			if( count($this_project->users) == 0 ) { echo("None."); }
@@ -209,7 +209,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->join_requests); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->join_requests[$j]);
-				echo('<li><a href="' . $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
+				echo('<li><a href="' . $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
 			}
 			
 			?>
@@ -244,7 +244,7 @@ $active_user->getProjects();
 			
 			<div class="projectList">
 			
-			<h4><a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
+			<h4><a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
 			
 			<p class="desc"><?=$this_project->description?></p>
 			
@@ -257,7 +257,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->users); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->users[$j]);
-				echo('<a href="' . $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
+				echo('<a href="' . $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
 			}
 			
 			if( count($this_project->users) == 0 ) { echo("None."); }
@@ -277,7 +277,7 @@ $active_user->getProjects();
 			for( $j = 0; $j < count($this_project->join_requests); $j++ ) {
 				$this_user = new User();
 				$this_user->populateFromId($this_project->join_requests[$j]);
-				echo('<li><a href="' . $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . '/joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
+				echo('<li><a href="' . $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> <a class="approve" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/approve">Approve</a> <a class="deny" href="' . $base_URL . 'joinrequest/' . $this_user->id . '/' . $this_project->id . '/deny">Deny</a></li>');
 			}
 			
 			?>

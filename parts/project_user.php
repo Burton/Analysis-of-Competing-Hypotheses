@@ -21,7 +21,7 @@
 **    along with Open Source ACH. If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
-<h3>View Partner Matrix <a href="<?=$_SERVER['REQUEST_URI']?>/print"><img class="icon" src="<?=$base_URL?>/images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
+<h3>View Partner Matrix <a href="<?=$_SERVER['REQUEST_URI']?>/print"><img class="icon" src="<?=$base_URL?>images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
 
 
 <?php

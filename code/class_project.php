@@ -353,7 +353,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores[$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -371,7 +371,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
 			$total = $this->hypotheses_rating_scores_users[$user_1->id][$this_hypothesis->id] + $this->hypotheses_rating_scores_users[$user_2->id][$this_hypothesis->id];
  			echo('<br><i>' . $total . '</i></th>');
 		}
@@ -390,7 +390,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores_personal[$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -406,7 +406,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores_users[$this_user->id][$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -422,7 +422,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores[$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -438,7 +438,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
 			$total = $this->hypotheses_rating_scores_users[$user_1->id][$this_hypothesis->id] + $this->hypotheses_rating_scores_users[$user_2->id][$this_hypothesis->id];
  			echo('<br><i>' . $total . '</i></th>');
 		}
@@ -457,7 +457,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores_personal[$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -473,7 +473,7 @@ class Project extends FrameworkDatabase {
 			$this_hypothesis->populateFromId($this->hypotheses[$j]);
 			echo('<th ');
 			if( !$display ) { echo('style="display: none;" '); }
-			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
+			echo('class="hypothesis_colgroup_' . $sort . '" onmouseover="return overlib(\'' . cleanForDisplay($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $this->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a> ');
  			echo('<br><i>' . $this->hypotheses_rating_scores_users[$this_user->id][$this_hypothesis->id] . '</i></th>');
 		}
 	
@@ -632,19 +632,19 @@ class Project extends FrameworkDatabase {
 				
 				
 			if( $group_rating <= 1 ) {
-				echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"unanimity\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Consensus</a> <span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
+				echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"unanimity\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Consensus</a> <span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
 			}
 	
 			if( $group_rating == 2 ) {
-				echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Mild Dispute</a></div>");
+				echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Mild Dispute</a></div>");
 			}
 	
 			if( $group_rating == 3 ) {
-				echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Large Dispute</a></div>");
+				echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Large Dispute</a></div>");
 			}
 	
 			if( $group_rating == 4 ) {
-				echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Extreme Dispute</a></div>");
+				echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Extreme Dispute</a></div>");
 			}
 			
 			
@@ -709,19 +709,19 @@ class Project extends FrameworkDatabase {
 				
 				
 			if( $group_rating <= 1 ) {
-				echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"unanimity\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Consensus</a> <span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
+				echo("', CAPTION, 'Consensus');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"unanimity\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Consensus</a> <span class=\"". $this_rating_style . "\">&nbsp $unanimous_score &nbsp</span></div>");
 			}
 	
 			if( $group_rating == 2 ) {
-				echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Mild Dispute</a></div>");
+				echo("', CAPTION, 'Mild Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"mildDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Mild Dispute</a></div>");
 			}
 	
 			if( $group_rating == 3 ) {
-				echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Large Dispute</a></div>");
+				echo("', CAPTION, 'Large Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"starkDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Large Dispute</a></div>");
 			}
 	
 			if( $group_rating == 4 ) {
-				echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "/project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Extreme Dispute</a></div>");
+				echo("', CAPTION, 'Extreme Dispute');\" onmouseout=\"return nd();\" class=\"colgroup_" . $sort . "\"><div class=\"extremeDisagreement\"><a href='" . $base_URL . "project/" . $this->id . "/cell/" . $evidence->id . "/" . $this->hypotheses[$j] . "'>Extreme Dispute</a></div>");
 			}
 			
 			

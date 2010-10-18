@@ -28,19 +28,19 @@
 
 <div class="menu mainMenu">
 
-<p><a href="<?=$base_URL?>/"><img src="<?=$base_URL?>/images/icons/house.png" width="16" height="16" border="0" />Home</a></p>
+<p><a href="<?=$base_URL?>"><img src="<?=$base_URL?>images/icons/house.png" width="16" height="16" border="0" />Home</a></p>
 
-<p><a href="<?=$base_URL?>/recent/"><img src="<?=$base_URL?>/images/icons/calendar.png" width="16" height="16" border="0" />Recent Activity</a></p>
+<p><a href="<?=$base_URL?>recent/"><img src="<?=$base_URL?>images/icons/calendar.png" width="16" height="16" border="0" />Recent Activity</a></p>
 
-<!-- <p><a href="<?=$base_URL?>/profile/<?=$active_user->username?>"><img src="<?=$base_URL?>/images/icons/user_red.png" width="16" height="16" border="0" />My Profile</a></p> -->
+<!-- <p><a href="<?=$base_URL?>profile/<?=$active_user->username?>"><img src="<?=$base_URL?>images/icons/user_red.png" width="16" height="16" border="0" />My Profile</a></p> -->
 
-<p><a href="<?=$base_URL?>/project/new"><img src="<?=$base_URL?>/images/icons/page_add.png" width="16" height="16" border="0" />Create New Project</a></p>
+<p><a href="<?=$base_URL?>project/new"><img src="<?=$base_URL?>images/icons/page_add.png" width="16" height="16" border="0" />Create New Project</a></p>
 
-<p><a href="<?=$base_URL?>/projects/"><img src="<?=$base_URL?>/images/icons/page_copy.png" width="16" height="16" border="0" />Browse Public Projects</a></p>
+<p><a href="<?=$base_URL?>projects/"><img src="<?=$base_URL?>images/icons/page_copy.png" width="16" height="16" border="0" />Browse Public Projects</a></p>
 
 <!--<p><a href="search/"><img src="images/icons/magnifier.png" width="16" height="16" border="0" />Search</a></p>-->
 
-<p><a href="<?=$base_URL?>/help/"><img src="<?=$base_URL?>/images/icons/help_red.png" width="16" height="16" border="0" />Help</a></p>
+<p><a href="<?=$base_URL?>help/"><img src="<?=$base_URL?>images/icons/help_red.png" width="16" height="16" border="0" />Help</a></p>
 
 </div>
 

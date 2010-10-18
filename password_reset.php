@@ -12,7 +12,7 @@ if( isset($_REQUEST['submit']) ) {
 	}
 	if( $user_found ) {
 		$this_user->sendPasswordReset();
-		//sendMail($this_user->email, "[CACH] Password reset request", "Please reset your password by visiting this URL:\r\n\r\n " . $base_URL . "/password_reset/" . $this_user->username . "/" . md5($this_user->password) . "\r\n\r\nThanks!\r\n\r\n - The ACH Bot");
+		//sendMail($this_user->email, "[CACH] Password reset request", "Please reset your password by visiting this URL:\r\n\r\n " . $base_URL . "password_reset/" . $this_user->username . "/" . md5($this_user->password) . "\r\n\r\nThanks!\r\n\r\n - The ACH Bot");
 
 	}
 }

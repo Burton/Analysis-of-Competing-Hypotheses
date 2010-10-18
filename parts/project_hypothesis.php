@@ -40,9 +40,9 @@ $this_user->populateFromId($active_hypothesis->user_id);
 <h3>Hypothesis: <?=$active_hypothesis->label?></h3>
 <h4>Description: <?=$active_hypothesis->description?></h4>
 
-<p class="info">Added by <a href="<?=$base_URL?>/profile/<?=$this_user->username?>"><?=$this_user->name?></a> on <b><?=$active_hypothesis->created?></b>.</p>
+<p class="info">Added by <a href="<?=$base_URL?>profile/<?=$this_user->username?>"><?=$this_user->name?></a> on <b><?=$active_hypothesis->created?></b>.</p>
 
-<p class="xml"><a href="<?=$base_URL?>/project/<?=$active_project->id?>/hypothesis/<?=$active_hypothesis->id?>/xml">XML</a></p>
+<p class="xml"><a href="<?=$base_URL?>project/<?=$active_project->id?>/hypothesis/<?=$active_hypothesis->id?>/xml">XML</a></p>
 
 
 </div>

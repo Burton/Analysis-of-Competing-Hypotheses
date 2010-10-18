@@ -31,7 +31,7 @@ $this_project->populateFromId($project_id);
 
 if( $this_project->open == "y" ) {
 	$result = mysql_do("INSERT INTO users_in_projects (project_id, user_id) VALUES ('$project_id', '$active_user->id')");
-	$this_project->mailEveryone("[ACH] New user in project '" . $this_project->title . "'", "Hello,\r\n\r\n" . $active_user->name . " has joined the project '" . $this_project->title . "':\r\n" . $base_URL . "/project/" . $this_project->id . "\r\n\r\n - The ACH Bot");
+	$this_project->mailEveryone("[ACH] New user in project '" . $this_project->title . "'", "Hello,\r\n\r\n" . $active_user->name . " has joined the project '" . $this_project->title . "':\r\n" . $base_URL . "project/" . $this_project->id . "\r\n\r\n - The ACH Bot");
 } else {
 	$result = mysql_do("INSERT INTO join_requests (user_id, project_id) VALUES ('$active_user->id', '$project_id')");
 	$project_owner = new User();

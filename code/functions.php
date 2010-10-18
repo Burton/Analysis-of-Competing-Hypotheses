@@ -98,7 +98,7 @@ function get_tag_cloud() {
 		$size = $min_font_size + ($count - $minimum_count) 
 			* ($max_font_size - $min_font_size) / $spread;
 		$cloud_tags[] = '<nobr><a style="font-size: '. floor($size) . 'px' 
-			. '" class="tag_cloud" href="'. $base_URL . '/tag/' . $tag 
+			. '" class="tag_cloud" href="'. $base_URL . 'tag/' . $tag 
 			. '" title="\'' . $tag  . '\' returned a count of ' . $count . '">' 
 			. htmlspecialchars(stripslashes($tag)) . '</a> <span style="padding-right: 10px; color: #999999">&times;' . $count . '</span></nobr>';
 	}
@@ -192,7 +192,7 @@ function showCellComments($evidence_id, $hypothesis_id, $thread_id) {
 		
 	<div class="comment" style="margin-left: <?php echo($reply_depth*50); ?>">
 	
-	<p class="by"><a href="<?=$base_URL?>/profile/<?=$commenter->username?>"><?=$commenter->name?></a> <?php if( $thread_id == 0 ) { ?>writes<?php } else { ?>replies<?php } ?>:</p>
+	<p class="by"><a href="<?=$base_URL?>profile/<?=$commenter->username?>"><?=$commenter->name?></a> <?php if( $thread_id == 0 ) { ?>writes<?php } else { ?>replies<?php } ?>:</p>
 	
 	<p class="comment"><?=nl2br($this_comment->comment)?></p>
 	
@@ -291,7 +291,7 @@ function showChat($project_id) {
 		$this_user->populateFromId($query_data['user_id']);
 		$result_2 = mysql_do("SELECT * FROM users_active WHERE user_id='$this_user->id' LIMIT 1;");
 		while($query_data_2 = mysql_fetch_array($result_2)) {
-			echo('<p><span class="date">' . $query_data['created'] . '</span> <span class="name"><a href="'. $base_URL . '/profile/' . $this_user->username . '" style="color: #' . $query_data_2['color'] . ';">' . $this_user->name . '</a></span>: <span class="message">' . $query_data['chat'] . '</span></p>');
+			echo('<p><span class="date">' . $query_data['created'] . '</span> <span class="name"><a href="'. $base_URL . 'profile/' . $this_user->username . '" style="color: #' . $query_data_2['color'] . ';">' . $this_user->name . '</a></span>: <span class="message">' . $query_data['chat'] . '</span></p>');
 		}
 	}
 	if( !$messages ) {
@@ -348,13 +348,13 @@ function sendMail($to, $subject, $message, $headers) {
 
 function helpLink($helpSubject) {
 	global $base_URL;
-	echo "<a href='" . $base_URL . "/help/$helpSubject' onClick=\"window.open('" . $base_URL . "/help/" . $helpSubject . "', 'Help', 'toolbar=yes,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=1000,height=500');  return false\"><img src=\"images/icons/help_red.png\" width=\"16\" height=\"16\" border=\"0\" alt='Help' /></a>";
+	echo "<a href='" . $base_URL . "help/$helpSubject' onClick=\"window.open('" . $base_URL . "help/" . $helpSubject . "', 'Help', 'toolbar=yes,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=1000,height=500');  return false\"><img src=\"images/icons/help_red.png\" width=\"16\" height=\"16\" border=\"0\" alt='Help' /></a>";
 	
 }
 
 function helpTextLink($helpSubject, $linktext) {
 	global $base_URL;
-	echo "<a href='" . $base_URL . "/help/$helpSubject' onClick=\"window.open('" . $base_URL . "/help/" . $helpSubject . "', 'Help', 'toolbar=yes,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=1000,height=500'); return false\">" . $linktext . "</a>";
+	echo "<a href='" . $base_URL . "help/$helpSubject' onClick=\"window.open('" . $base_URL . "help/" . $helpSubject . "', 'Help', 'toolbar=yes,directories=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=1000,height=500'); return false\">" . $linktext . "</a>";
 	
 }
 

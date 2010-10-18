@@ -129,7 +129,7 @@ class Evidence extends FrameworkDatabase {
 		
 		<a name="comment_<?=$this_comment->id?>" />
 		
-		<p class="by"><a href="<?=$base_URL?>/profile/<?=$commenter->username?>"><?=$commenter->name?></a> <?php if( $thread_id == 0 ) { ?>writes<?php } else { ?>replies<?php } ?>:</p>
+		<p class="by"><a href="<?=$base_URL?>profile/<?=$commenter->username?>"><?=$commenter->name?></a> <?php if( $thread_id == 0 ) { ?>writes<?php } else { ?>replies<?php } ?>:</p>
 		
 		<p class="comment"><?=nl2br($this_comment->comment)?></p>
 		

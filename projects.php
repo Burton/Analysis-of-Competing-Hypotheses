@@ -65,7 +65,7 @@ if( $active_user->logged_in ) { ?>
 			
 			<p>The projects below may be viewed by anyone.<br />
 			Those with a lock (
-			<span class="closed"><img src="<?=$base_URL?>/images/icons/lock.png" alt="Closed" /></span>
+			<span class="closed"><img src="<?=$base_URL?>images/icons/lock.png" alt="Closed" /></span>
 			) are still publicly viewable, but require the owner's permission for you to join.</p>
 			
 			<?php
@@ -81,7 +81,7 @@ if( $active_user->logged_in ) { ?>
 			
 			<div class="projectList">
 			
-				<h4><a href="<?=$base_URL?>/project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( $this_project->open != "y" ) { echo('<span class="closed"><img src="' . $base_URL . '/images/icons/lock.png" alt="Closed" /></span>'); } ?> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
+				<h4><a href="<?=$base_URL?>project/<?=$this_project->id?>"><?=$this_project->title?></a> <?php if( $this_project->open != "y" ) { echo('<span class="closed"><img src="' . $base_URL . 'images/icons/lock.png" alt="Closed" /></span>'); } ?> <?php if( in_array($this_project->id, $active_user->owner_of_projects) ) { echo('<span class="isOwner">Owner</span>'); } ?></h4>
 				
 				<p class="desc"><?=$this_project->description?></p>
 				
@@ -93,7 +93,7 @@ if( $active_user->logged_in ) { ?>
 					for( $j = 0; $j < count($this_project->users); $j++ ) {
 						$this_user = new User();
 						$this_user->populateFromId($this_project->users[$j]);
-						echo('<a href="'. $base_URL . '/profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
+						echo('<a href="'. $base_URL . 'profile/' . $this_user->username . '">' . $this_user->name . '</a> ');
 					}
 					
 					if( count($this_project->users) == 0 ) { echo("None."); }

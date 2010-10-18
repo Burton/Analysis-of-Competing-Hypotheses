@@ -1376,8 +1376,7 @@ div.na {
 
 div.very_inconsistent {
 
-	background: #FFFF00
-	
+	background: #FFFF00;	
 	color: #000000;
 	font-weight: bold;
 	text-align: center;
@@ -1393,8 +1392,6 @@ div.very_inconsistent {
 div.inconsistent {
 
 	background: #FFFF88;
-
-
 	color: #000000;
 	font-weight: bold;
 	text-align: center;

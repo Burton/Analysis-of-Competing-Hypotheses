@@ -37,10 +37,10 @@
 
 if( $active_user->logged_in_full_account ) {
 
-	echo('<span class="tab">Hello, <a href="' . $base_URL . '/profile/' . $active_user->username . '"> ' . $active_user->name . '</a> ');
+	echo('<span class="tab">Hello, <a href="' . $base_URL . 'profile/' . $active_user->username . '"> ' . $active_user->name . '</a> ');
 	
 	
-	echo('</span> <span class="tab"><a href="' . $base_URL . '/auth/log_out.php">Logout</a></span>');
+	echo('</span> <span class="tab"><a href="' . $base_URL . 'auth/log_out.php">Logout</a></span>');
 	
 }
 

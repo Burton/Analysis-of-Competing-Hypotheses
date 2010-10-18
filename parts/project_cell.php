@@ -34,10 +34,10 @@ $active_hypothesis->populateFromId($_REQUEST['hypothesis_id']);
 
 <h3>Cell Details</h3>
 
-<h4>Evidence: <a href="<?=$base_URL?>/project/<?=$active_project->id?>/evidence/<?=$active_evidence->id?>"><?=$active_evidence->name?></a></h4>
+<h4>Evidence: <a href="<?=$base_URL?>project/<?=$active_project->id?>/evidence/<?=$active_evidence->id?>"><?=$active_evidence->name?></a></h4>
 <br/><?=$active_evidence->details?><br>
 
-<h4>Hypothesis: <a href="<?=$base_URL?>/project/<?=$active_project->id?>/hypothesis/<?=$active_hypothesis->id?>"><?=$active_hypothesis->label?></a></h4>
+<h4>Hypothesis: <a href="<?=$base_URL?>project/<?=$active_project->id?>/hypothesis/<?=$active_hypothesis->id?>"><?=$active_hypothesis->label?></a></h4>
 
 <h4>User Ratings</h4>
 

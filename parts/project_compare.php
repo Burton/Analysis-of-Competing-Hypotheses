@@ -21,7 +21,7 @@
 **    along with Open Source ACH. If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
-<h3>Compare User Matrices <a onclick="goToPrintPage();"><img class="icon" src="<?=$base_URL?>/images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
+<h3>Compare User Matrices <a onclick="goToPrintPage();"><img class="icon" src="<?=$base_URL?>images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
 
 <?php
 
@@ -78,7 +78,7 @@ for( $j = 0; $j < count($active_project->users); $j++ ) {
 
 </form>
 
-<p><img src="<?=$base_URL?>/images/consensusgauge.gif"></p>
+<p><img src="<?=$base_URL?>images/consensusgauge.gif"></p>
 
 
 

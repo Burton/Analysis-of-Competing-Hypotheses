@@ -36,7 +36,7 @@
 				echo "<h2>You must <a href=\"$base_URL/project/$active_project->id/hypothesis/new\">add hypotheses</a> before continuing.</h2><p>Quick tips:
 				<ul><li>All of your hypotheses must be mutually exclusive: if one is correct, all others must be false.</li>
 				<li>Include all reasonable possibilities, including those that seem unlikely but not impossible.</li></ul></p>
-				<p><a href=\"" . $base_URL . "/help/hypotheses.php\">Read more about choosing good hypotheses</a>,
+				<p><a href=\"" . $base_URL . "help/hypotheses.php\">Read more about choosing good hypotheses</a>,
 				 or <a href=\"https://mediawiki.bridge-ic.net/index.php?title=ACH:" . $active_project->title . "\">discuss potential hypotheses with your teammates on the BRIDGE wiki</a>.</p>"; 
 				} else {
 				echo "<h2>This matrix is empty. The project owner has not yet added any hypotheses.</h2>
@@ -59,7 +59,7 @@
 	
 	
 	
-	<p><b>Consensus Guage:</b> <img style="position: relative; top: 4px; padding-left: 15px;" src="<?=$base_URL?>/images/gauge.gif"></p>
+	<p><b>Consensus Guage:</b> <img style="position: relative; top: 4px; padding-left: 15px;" src="<?=$base_URL?>images/gauge.gif"></p>
 	
 	
 	

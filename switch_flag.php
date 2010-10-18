@@ -33,10 +33,10 @@ $active_evidence->id = $_REQUEST['evidence_id'];
 
 if( $active_evidence->flag == "y" ) {
 	$active_evidence->flag = "n";
-	echo("<img src='". $base_URL . "/images/icons/bullet_add.png' />");
+	echo("<img src='". $base_URL . "images/icons/bullet_add.png' />");
 } else {
 	$active_evidence->flag = "y";
-	echo("<img src='". $base_URL . "/images/icons/flag_red.png' />");
+	echo("<img src='". $base_URL . "images/icons/flag_red.png' />");
 }
 
 $active_evidence->update();

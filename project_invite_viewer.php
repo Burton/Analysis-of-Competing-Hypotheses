@@ -41,7 +41,7 @@ while($query_data = mysql_fetch_array($result)) {
 	$user_email = $query_data['email'];
 	mysql_do("INSERT INTO users_in_projects_view_only (user_id, project_id) VALUES ('$user_id', '$this_project->id')");
 	$found = TRUE;
-	sendMail($user_email, "[ACH] Project view invitation.", "Hello,\r\n\r\nYou have been invited to view project '" . $this_project->title . "':\r\n " . $base_URL . '/project/' . $this_project->id . "\r\n\r\n - The ACH Bot");
+	sendMail($user_email, "[ACH] Project view invitation.", "Hello,\r\n\r\nYou have been invited to view project '" . $this_project->title . "':\r\n " . $base_URL . 'project/' . $this_project->id . "\r\n\r\n - The ACH Bot");
 
 }
 

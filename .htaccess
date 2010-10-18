@@ -1,6 +1,6 @@
 Options +Indexes -MultiViews
 RewriteEngine  on
-RewriteBase    /
+RewriteBase    /sub/sub
 
 
 

@@ -85,7 +85,7 @@ $active_project->getEandH();
 for( $j = 0; $j < count($active_project->hypotheses); $j++ ) {
 	$this_hypothesis = new Hypothesis();
 	$this_hypothesis->populateFromId($active_project->hypotheses[$j]);
-	echo('<th class="hypothesis" onmouseover="return overlib(\'' . addslashes($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $active_project->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a></th>');
+	echo('<th class="hypothesis" onmouseover="return overlib(\'' . addslashes($this_hypothesis->description) . '\', CAPTION, \'Hypothesis\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $active_project->id . '/hypothesis/' . $this_hypothesis->id . '">' . $this_hypothesis->label . '</a></th>');
 }
 
 echo('</tr></thead><tbody>');
@@ -93,7 +93,7 @@ echo('</tr></thead><tbody>');
 for( $i = 0; $i < count($active_project->evidence); $i++ ) {
 	$this_evidence = new Evidence();
 	$this_evidence->populateFromId($active_project->evidence[$i]);
-	echo('<tr><td class="evidence" onmouseover="return overlib(\'' . addslashes($this_evidence->details) . '\', CAPTION, \'Evidence\');" onmouseout="return nd();"><a href="'. $base_URL . '/project/' . $active_project->id . '/evidence/' . $this_evidence->id . '">' . $this_evidence->name . '</a></td>');
+	echo('<tr><td class="evidence" onmouseover="return overlib(\'' . addslashes($this_evidence->details) . '\', CAPTION, \'Evidence\');" onmouseout="return nd();"><a href="'. $base_URL . 'project/' . $active_project->id . '/evidence/' . $this_evidence->id . '">' . $this_evidence->name . '</a></td>');
 
 ?>
 
@@ -101,7 +101,7 @@ for( $i = 0; $i < count($active_project->evidence); $i++ ) {
 	<td class="dcDateOfSource" style="display: none;"><?=substr($this_evidence->date_of_source, 0, 10)?></td>
 	<td class="dcType" style="display: none;"><?=$this_evidence->type?></td>
 	<td class="dcCode" style="display: none;"><?=$this_evidence->code?></td>
-	<td class="dcFlag" style="display: none;"><a id="flag_<?=$this_evidence->id?>" onclick="switchFlag('flag_<?=$this_evidence->id?>', <?=$this_evidence->id?>);"><?php if( $this_evidence->flag == "y" ) { echo("<img src='". $base_URL . "/images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "/images/icons/bullet_add.png' />"); } ?></a></td>
+	<td class="dcFlag" style="display: none;"><a id="flag_<?=$this_evidence->id?>" onclick="switchFlag('flag_<?=$this_evidence->id?>', <?=$this_evidence->id?>);"><?php if( $this_evidence->flag == "y" ) { echo("<img src='". $base_URL . "images/icons/flag_red.png' />"); } else { echo("<img src='". $base_URL . "images/icons/bullet_add.png' />"); } ?></a></td>
 	
 <?php
 

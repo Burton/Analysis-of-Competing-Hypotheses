@@ -37,10 +37,10 @@ $SQL_CACHE = array();
 $SQL_DUPES = 0;
 $SQL_SELECTS = 0;
 
-$dbhost = 'localhost';
-$dbusername = 'cach';
-$dbuserpassword = 'A6aPKXxeMWfMGjJq';
-$default_dbname = 'jmitc';
+$dbhost = '';
+$dbusername = '';
+$dbuserpassword = '';
+$default_dbname = '';
 $MYSQL_ERRNO = '';
 
 function db_connect() {

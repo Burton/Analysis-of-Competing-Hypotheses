@@ -22,10 +22,10 @@
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
 
-<base href="http://sma.competinghypotheses.com/sub/sub/">
-<?php $base_URL="http://sma.competinghypotheses.com/sub/sub/";
-$email_domain="sma.competinghypotheses.com";
-$versionNumber="1.0.2alpha"?>
+<base href="">
+<?php $base_URL="";
+$email_domain="";
+$versionNumber="1.0.3alpha"?>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <link rel="stylesheet" type="text/css" href="css/sortabletable.css" />
 

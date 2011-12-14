@@ -55,7 +55,7 @@
 			
 			?>
 			
-				<h3>Group Matrix <a onclick="goToPrintPage();"><img class="icon" src="<?$base_URL?>/images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
+				<h3>Group Matrix <a onclick="goToPrintPage();"><img class="icon" src="<?$base_URL?>images/icons/printer.png" alt="Print this page" border="0" /></a></h3>
 	
 	
 	

@@ -22,8 +22,9 @@
 //////////////////////////////////////////////////////////////////////////////// */
 ?>
 
-<base href="">
-<?php $base_URL="";
+<?php print '<base href="http://' . $_SERVER['SERVER_NAME'] . '/">'; ?>
+<?php $base_URL='http://' . $_SERVER['SERVER_NAME'] . '/';
+
 $email_domain="";
 $versionNumber="1.0.3alpha"?>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
